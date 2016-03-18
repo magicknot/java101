@@ -73,7 +73,7 @@ Um bolo é composto por um conjunto de ingredientes (açúcar, ovos, etc.) - os 
 ```java
 class Cake {
   int sugar; //quantidade de acucar
-  int eggs;  //quantidade de ovos
+  int eggs;   //quantidade de ovos
   // ... outros ingredientes
   
   // Construtores
@@ -122,4 +122,23 @@ class ChocolateCake extends Cake { // herança: ChocolateCake **é um** Cake
 
 ## Packages e Controlo de Acessos
 
-// TODO
+Têm como função agrupar um conjunto de código relaccionado, melhorando a sua organização e reduzindo colisão de nomes.
+
+Controlo de acessos:
+
+|             | classe | outra classe (mesmo package) | subclass (outro package) | outra classe (outro package) |
+| ----------: | :----: | :--------------------------: | :----------------------: | :--------------------------: |
+|    `public` |  sim   |             sim              |           sim            |             sim              |
+| `protected` |  sim   |             sim              |           sim            |             não              |
+|   `private` |  sim   |             não              |           não            |             não              |
+|   (package) |  sim   |             sim              |           não            |             não              |
+
+```java
+package pastry;
+
+// O caminho completo da classe Cake passa a ser pastry.Cake
+public abstract class Cake {
+  // corpo da classe
+}
+```
+
