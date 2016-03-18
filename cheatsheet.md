@@ -39,7 +39,7 @@ new Cake(); // cria uma nova instância da classe Bolo
 Permitem aceder aos objectos.
 
 ```java
-Cake c = new Cake(); //b é uma referência para uma instância (objecto) da classe Cake
+Cake c = new Cake(); //c é uma referência para uma instância (objecto) da classe Cake
 ```
 
 ## Métodos e atributos
