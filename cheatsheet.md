@@ -73,7 +73,7 @@ Um bolo é composto por um conjunto de ingredientes (açúcar, ovos, etc.) - os 
 ```java
 class Cake {
   int sugar; //quantidade de acucar
-  int eggs;   //quantidade de ovos
+  int eggs;  //quantidade de ovos
   // ... outros ingredientes
   
   // Construtores
@@ -95,7 +95,7 @@ class Cake {
   
   // ... outros métodos
   int divide() {
-     // dividi o bolo em fatias e retorna o número total de fatias
+     // divide o bolo em fatias e retorna o número total de fatias
   }
 
 }
