@@ -107,7 +107,7 @@ Existem *n* tipos diferentes de bolos. E apesar de todos terem um conjunto de at
 
 Assim, podemos dizer que um `ChocolateCake` é um `Cake`, ou seja, `Cake` é a superclasse de `ChocolateCake` e `ChocolateCake` é a subclasse de `Cake`.
 
-Adicionalmente, podemos combinar tipos mais simples para obtermos um tipo mais composto - **composição**.
+Adicionalmente, podemos combinar tipos mais simples para obtermos um tipo mais complexo - **composição**.
 
 ```java
 class ChocolateCake extends Cake { // herança: ChocolateCake **é um** Cake
