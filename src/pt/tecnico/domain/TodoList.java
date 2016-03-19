@@ -29,9 +29,7 @@ public class TodoList {
 
     @Override
     public String toString(){
-        StringBuilder sb = new StringBuilder();
-        sb.append(name + "\n");
-        items.stream().forEach(item -> sb.append(item.toString() + "\n"));
-        return sb.toString();
+        return name;
     }
+
 }

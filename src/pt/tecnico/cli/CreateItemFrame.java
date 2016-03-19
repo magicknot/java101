@@ -15,11 +15,7 @@ public class CreateItemFrame extends CliFrame {
         String input  = controller.scanner.nextLine();
 
         System.out.print("Add check ? (true/false)");
-        Boolean isCheckable = controller.scanner.nextBoolean();
-        controller.scanner.nextLine();
-
-
-
+        Boolean isCheckable = controller.scanner.nextLine().equals("true");
         controller.addItem(input,isCheckable);
         return new MainCliFrame(controller);
     }

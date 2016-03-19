@@ -10,9 +10,11 @@ public class ViewFrame extends CliFrame {
 
     @Override
     public CliFrame listen() throws IllegalArgumentException {
-        System.out.println("What do you have to do?");
+        System.out.println("What do you see?");
         String input  = controller.scanner.nextLine();
-        controller.viewText(input);
+        for(String attachment : controller.viewText(input)){
+            System.out.println(attachment);
+        }
         controller.viewImage(input);
         return new MainCliFrame(controller);
     }

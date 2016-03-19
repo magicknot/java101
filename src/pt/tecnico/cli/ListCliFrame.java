@@ -1,6 +1,8 @@
 package pt.tecnico.cli;
 
 
+import pt.tecnico.domain.Item;
+
 /**
  * Created by diutsu on 3/19/16.
  */
@@ -12,8 +14,9 @@ public class ListCliFrame extends CliFrame {
 
     @Override
     public CliFrame listen() throws IllegalArgumentException {
-        controller.listItems().forEach(item -> System.out.println(item));
-
+        for(String item : controller.listItems()) {
+            System.out.println(item);
+        }
         return new MainCliFrame(controller);
     }
 }

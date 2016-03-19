@@ -3,6 +3,7 @@ package pt.tecnico.cli;
 import java.lang.IllegalArgumentException;
 import pt.tecnico.domain.TodoList;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 /**
@@ -27,7 +28,7 @@ public class CLIMenu {
         while(true){
             try {
                 currentFrame = currentFrame.listen();
-            } catch (IllegalArgumentException e){
+            } catch (IllegalArgumentException | InputMismatchException e){
                 System.out.print("Invalid option, try again\n");
             }
         }

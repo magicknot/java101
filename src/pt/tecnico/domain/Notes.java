@@ -7,5 +7,6 @@ public class Notes extends Attachment {
     public String text;
     
     public Notes(String attachment) {
+        this.text = attachment;
     }
 }

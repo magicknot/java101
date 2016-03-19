@@ -9,26 +9,14 @@ import java.awt.image.BufferedImage;
  */
 public class ImageViewer {
 
-    private static JFrame frame = buildFrame();
-
-    private static JFrame buildFrame() {
+    public static void paint(final ImageIcon img) {
         JFrame frame = new JFrame();
-        frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-        frame.setSize(200, 200);
+        frame.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
+        frame.setSize(1280, 720);
         frame.setVisible(true);
-        return frame;
-    }
-
-    public static void paint(BufferedImage img) {
-        frame.removeAll();
-        JPanel pane = new JPanel() {
-            @Override
-            protected void paintComponent(Graphics g) {
-                super.paintComponent(g);
-                g.drawImage(img, 0, 0, null);
-            }
-        };
-        frame.add(pane);
-
+        JLabel label = new JLabel("", img, JLabel.CENTER);
+        JPanel panel = new JPanel(new BorderLayout());
+        panel.add( label, BorderLayout.CENTER );
+        frame.add(panel);
     }
 }
