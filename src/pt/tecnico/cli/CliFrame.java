@@ -14,7 +14,7 @@ public abstract class CliFrame {
     }
 
     protected enum AvailableCommands {
-        list, listAll, select, create, remove, attach, view
+        list, listAll, select, create, remove, attach, done, view
     }
 
     abstract public CliFrame listen() throws IllegalArgumentException;

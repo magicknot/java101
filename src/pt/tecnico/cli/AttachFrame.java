@@ -19,7 +19,12 @@ public class AttachFrame extends CliFrame {
         System.out.print("What do you want to attach?");
         String attachment = controller.scanner.nextLine();
 
-        controller.attach(task, attachment);
+        System.out.print("Is that a picture ? (true/false)");
+        Boolean isPicture = controller.scanner.nextBoolean();
+        controller.scanner.nextLine();
+
+
+        controller.attach(task, attachment,isPicture);
         return new MainCliFrame(controller);
     }
 }

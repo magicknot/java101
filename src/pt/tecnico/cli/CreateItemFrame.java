@@ -13,7 +13,14 @@ public class CreateItemFrame extends CliFrame {
     public CliFrame listen() throws IllegalArgumentException {
         System.out.println("What do you have to do?");
         String input  = controller.scanner.nextLine();
-        controller.addItem(input);
+
+        System.out.print("Add check ? (true/false)");
+        Boolean isCheckable = controller.scanner.nextBoolean();
+        controller.scanner.nextLine();
+
+
+
+        controller.addItem(input,isCheckable);
         return new MainCliFrame(controller);
     }
 }

@@ -14,15 +14,17 @@ public class Picture extends Attachment {
     private BufferedImage image;
 
 
-    public void readImage(String imagePath){
+    public Picture(String imagePath) {
         try {
             image = ImageIO.read(new File(imagePath));
-        } catch (IOException e){
+        } catch (IOException e) {
 
         }
     }
 
-    public void paint(){
-        ImageViewer.paint(image);
+    public BufferedImage getImage(){
+        return image;
     }
+
 }
+

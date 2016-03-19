@@ -10,7 +10,7 @@ public class MainCliFrame extends CliFrame {
     }
 
     public CliFrame listen(){
-        System.out.print("Available options are list, delete, attach, create");
+        System.out.print("Available options are list, remove, attach, create, view, do");
 
         String  input = controller.scanner.nextLine();
 
@@ -21,6 +21,12 @@ public class MainCliFrame extends CliFrame {
                 return new CreateItemFrame(controller);
             case attach :
                 return new AttachFrame(controller);
+            case view :
+                return new ViewFrame(controller);
+            case remove :
+                return new DeleteFrame(controller);
+            case done :
+                return new DoFrame(controller);
         }
         return this;
     }
