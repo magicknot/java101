@@ -1,25 +1,22 @@
 package pt.tecnico.domain;
 
+import java.util.ArrayList;
 import java.util.TreeSet;
 
 /**
  * Created by diutsu on 18/03/16.
  */
 public class TodoList {
-    private TreeSet<Item> items;
+    private ArrayList<Item> items;
     private String name;
 
     public TodoList(String name){
-        this.items = new TreeSet<Item>();
+        this.items = new ArrayList<Item>();
         this.name = name;
     }
 
-    public TreeSet<Item> getItems() {
+    public ArrayList<Item> getItems() {
         return items;
-    }
-
-    public void setItems(TreeSet<Item> items) {
-        this.items = items;
     }
 
     public String getName() {
