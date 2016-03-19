@@ -2,7 +2,7 @@
 
 ### O que é POO?
 
-// TODO
+É um paradigma de programação, existente em várias linguagens, baseado no conceito de objectos. Um objecto é uma estrutura de dados composta por informação - **atributos** - e procedimentos que geralmente modificam a informação do objecto - **métodos**. Um objecto tem a noção de si próprio (`this` em Java).
 
 ## Entidades
 
