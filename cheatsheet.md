@@ -75,24 +75,24 @@ class Cake {
   int sugar; //quantidade de acucar
   int eggs;   //quantidade de ovos
   // ... outros ingredientes
-  
+
   // Construtores
   Sugar(int sugarQuantity, int amountOfEggs) {
      sugar = sugarQuantity;
      eggs = amountOfEggs;
   }
-  
+
   // Getters e Setters
   int getSugarQuantity() {
     return acucar;
   }
-  
+
   void setSugarQuantity(int newSugarQuantity) {
      sugar = newSugarQuantity;
   }
-  
+
   // ... outros getters e setters
-  
+
   // ... outros métodos
   int divide() {
      // divide o bolo em fatias e retorna o número total de fatias
@@ -118,7 +118,54 @@ class ChocolateCake extends Cake { // herança: ChocolateCake **é um** Cake
 
 ## Polimorfismo, Interfaces e Classes Abstractas
 
-// TODO
+### Classes Abstractas
+
+Representa um conceito que não está completamente definido, e portanto não pode ser instanciado. Usamos a keyword `abstract` para esse efeito.
+
+Até agora temos usado a classe `Cake`, mas faz sentido podermos criar objectos do tipo `Cake`?
+
+```java
+abstract class Cake {
+  // corpo da classe
+}
+```
+
+Numa classe abstracta também podemos declarar métodos abstractos (métodos sem corpo, que serão implementados nas classes que herdarem dessa classe):
+
+```java
+abstract class Cake {
+  // Corpo da classe ...
+  
+  // a forma como fatiamos um bolo, depende do tipo concreto bolo
+  abstract int devide(); 
+}
+```
+
+### Interfaces
+
+Objectos diferentes podem ter comportamento semelhantes. Tanto um bolo como um doce podem ser comidos, por exemplo.
+
+```java
+interface Eatable {
+  void eat();
+}
+
+class ChocolateCake extends Cake implements Eatable {
+ void eat() {
+   // nom nom nom 
+ } 
+}
+```
+
+### Polimorfismo
+
+É a capacidade de referir um objecto de várias formas, ou seja através de tipos que não o seu próprio.
+
+Em herança podemos referir com tipos superiores na hierarquia de classes objectos de tipos inferiores. Por exemplo:
+
+```java
+Cake cake = new ChocolateCake();
+```
 
 ## Packages e Controlo de Acessos
 
